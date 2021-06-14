@@ -79,7 +79,7 @@ def load_data():
       market_cap.append(i['quote'][currency_price_unit]['marketCap']) # market_cap
       volume_24h.append(i['quote'][currency_price_unit]['volume24h']) # volume_24h
 
-    df = pd.DataFrame(columns=['coin_name', 'coin_symbol', 'marketCap', 'percentChange1h', 'percentChange24h', 'percentChange7d', 'price', 'volume24h'])
+    df = pd.DataFrame(columns=['coin_name', 'coin_symbol','price','marketCap', 'volume24h', 'percentChange1h', 'percentChange24h', 'percentChange7d'])
     df['coin_name'] = coin_name
     df['coin_symbol'] = coin_symbol
     df['price'] = price
