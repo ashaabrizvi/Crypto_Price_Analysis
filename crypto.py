@@ -44,7 +44,7 @@ col2, col3 = st.beta_columns((2,1))
 col1.header('Input Options')
 
 ## Sidebar - Currency price unit
-currency_price_unit = col1.selectbox('Select currency for price', ('USD','INR'))
+currency_price_unit = col1.selectbox('Select currency for price', ('USD','BTC','ETH'))
 
 # Web scraping of CoinMarketCap data
 @st.cache
@@ -162,9 +162,3 @@ else:
     plt.subplots_adjust(top = 1, bottom = 0)
     df_change['percentChange1h'].plot(kind='barh', color=df_change.positive_percent_change_1h.map({True: 'g', False: 'r'}))
     col3.pyplot(plt)
-
-
-if __name__ == '__main__':
-    main()
-    
-    st.markdown("For issues Contact - ashaabrizvi11@gmail.com")
