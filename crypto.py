@@ -61,12 +61,13 @@ def load_data():
 
     coin_name = []
     coin_symbol = []
+    price = []
     market_cap = []
+    volume_24h = []
     percent_change_1h = []
     percent_change_24h = []
     percent_change_7d = []
-    price = []
-    volume_24h = []
+    
 
     for i in listings:
       coin_name.append(i['slug'])
